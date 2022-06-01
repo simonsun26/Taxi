@@ -1,6 +1,6 @@
 public class Taxi {
     Human driver;
-    Human[] passengers = new Human[4];
+    Human[] passengers = new Human[4]; //just a test
 
     public String getDriverName() {
         return driver.toString();
