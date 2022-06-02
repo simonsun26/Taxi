@@ -8,7 +8,7 @@ public class Taxi {
 
     public void add(Human one) {
         if (passengers[3] != null) {
-            System.out.println("We sorry!" + one.toString() + "!");
+            System.out.println("We sorry!" + one.toString() + " not in!");
             return;
         }
         for (int i = 0; i < passengers.length; i++) {
