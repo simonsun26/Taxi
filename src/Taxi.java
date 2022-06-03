@@ -54,11 +54,10 @@ public class Taxi {
                 n = i;
             }
         }
+        System.out.println(n);
         Human[] temp_getout = new Human[n+1];
         temp_getout = passengers;
-        for (int i = 0; i < temp_getout.length; i++) {
-            passengers[i] = null;
-        }
+        passengers = new Human[4];
         return temp_getout;
     }
 
@@ -71,7 +70,7 @@ public class Taxi {
     // System.out.println(onetaxi.getDriverName());
     // System.out.println(onetaxi.passengers[0].toString());
     System.out.println(onetaxi.toString());
-    onetaxi.allGetOut();
+    System.out.println(onetaxi.allGetOut()[0]);
     System.out.println(onetaxi.toString());
     }
 }
