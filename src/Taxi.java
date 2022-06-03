@@ -44,6 +44,24 @@ public class Taxi {
         return "This is the Taxi of " + driver.toString() + ". He takes " + pass_info + " along.";
     }
 
+    public Human[] allGetOut() {
+        if (passengers[0] == null) {
+            return passengers;
+        }
+        int n = 0;
+        for (int i = 0; i < passengers.length; i++) {
+            if (passengers[i] != null) {
+                n = i;
+            }
+        }
+        Human[] temp_getout = new Human[n+1];
+        temp_getout = passengers;
+        for (int i = 0; i < temp_getout.length; i++) {
+            passengers[i] = null;
+        }
+        return temp_getout;
+    }
+
     public static void main(String[] args) {
     Taxi onetaxi = new Taxi();
     onetaxi.driver = new Human("KK", "Alow");
@@ -52,6 +70,8 @@ public class Taxi {
     onetaxi.add(new Human("Ali", "Toa"));
     // System.out.println(onetaxi.getDriverName());
     // System.out.println(onetaxi.passengers[0].toString());
+    System.out.println(onetaxi.toString());
+    onetaxi.allGetOut();
     System.out.println(onetaxi.toString());
     }
 }
