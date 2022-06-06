@@ -2,7 +2,7 @@ public class ListElement {
     private String content;
     private ListElement next;
 
-    public ListElement(String a){
+    public ListElement(String a) {
         if (a == null || a.equals("")) {
             throw new IllegalArgumentException("content must not be null");
         }
