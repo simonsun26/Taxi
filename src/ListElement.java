@@ -1,27 +1,30 @@
 public class ListElement {
     private String content;
-    private String next;
+    private ListElement next;
+
     public ListElement(String a){
-        if (a == null) {
+        if (a == null || a.equals("")) {
             throw new IllegalArgumentException("content must not be null");
         }
-        content = a;
+        this.content = a;
     }
 
     public String getContent() {
         return content;
     }
 
-    public String getNext() {
+    public ListElement getNext() {
         return next;
     }
 
     public void setContent(String a) {
-        content = a;
+        if (a == null || a.equals("")) {
+            throw new IllegalArgumentException("content must not be null or empty");
+        }
+        this.content = a;
     }
 
-    public void setNext(String a) {
-        next = a;
+    public void setNext(ListElement a) {
+        this.next = a;
     }
-
 }
